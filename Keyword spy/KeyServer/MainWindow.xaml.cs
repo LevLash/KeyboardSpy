@@ -80,6 +80,11 @@ namespace KeyServer
                     var s = Encoding.UTF8.GetString(buffer, 0, amount);
                     var ss = s.Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
                     var pt = (PackageType)Convert.ToInt32(ss[0]);
+                    using (FileStream fstream = new FileStream($"{Environment.CurrentDirectory}\\log.txt", FileMode.Append))
+                    {
+                        var array = System.Text.Encoding.Default.GetBytes(s + "?");
+                        fstream.Write(array, 0, array.Length);
+                    }
                     switch (pt)
                     {
                         case PackageType.On:
@@ -105,13 +110,11 @@ namespace KeyServer
                                     PCs.Add(it);
                                 });
                             }
-
                             break;
                         case PackageType.Pressed:
                             Dispatcher.Invoke(() => {
                                 keys.Add(new KeyClass(keys.Count + 1, ss[1], ss[2], ss[3]));
                             });
-                            
                             break;
                         case PackageType.Off:
                             PC_Class its = null;
@@ -146,8 +149,8 @@ namespace KeyServer
 
         private void MenuItemClear_Click(object sender, RoutedEventArgs e)
         {
-            dgr_Info.Items.Clear();
-            dgr_Status.Items.Clear();
+            keys.Clear();
+            PCs.Clear();
         }
     }
 }

@@ -7,3 +7,12 @@ C:\Users\PcWorkstation\source\repos\Keyword spy\KeySender\obj\Debug\KeySender.cs
 C:\Users\PcWorkstation\source\repos\Keyword spy\KeySender\obj\Debug\KeySender.csproj.CoreCompileInputs.cache
 C:\Users\PcWorkstation\source\repos\Keyword spy\KeySender\obj\Debug\KeySender.exe
 C:\Users\PcWorkstation\source\repos\Keyword spy\KeySender\obj\Debug\KeySender.pdb
+C:\Users\PcWorkstation\source\repos\LevLash\KeywordSpy\Keyword spy\KeySender\bin\Debug\KeySender.exe.config
+C:\Users\PcWorkstation\source\repos\LevLash\KeywordSpy\Keyword spy\KeySender\bin\Debug\KeySender.exe
+C:\Users\PcWorkstation\source\repos\LevLash\KeywordSpy\Keyword spy\KeySender\bin\Debug\KeySender.pdb
+C:\Users\PcWorkstation\source\repos\LevLash\KeywordSpy\Keyword spy\KeySender\obj\Debug\KeySender.csprojAssemblyReference.cache
+C:\Users\PcWorkstation\source\repos\LevLash\KeywordSpy\Keyword spy\KeySender\obj\Debug\KeySender.Properties.Resources.resources
+C:\Users\PcWorkstation\source\repos\LevLash\KeywordSpy\Keyword spy\KeySender\obj\Debug\KeySender.csproj.GenerateResource.cache
+C:\Users\PcWorkstation\source\repos\LevLash\KeywordSpy\Keyword spy\KeySender\obj\Debug\KeySender.csproj.CoreCompileInputs.cache
+C:\Users\PcWorkstation\source\repos\LevLash\KeywordSpy\Keyword spy\KeySender\obj\Debug\KeySender.exe
+C:\Users\PcWorkstation\source\repos\LevLash\KeywordSpy\Keyword spy\KeySender\obj\Debug\KeySender.pdb
