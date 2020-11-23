@@ -9,6 +9,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -23,7 +24,7 @@ namespace Show
     public partial class MainWindow : Window
     {
         ObservableCollection<KeyClass> keysList;
-        FindFilePath dlg;
+        string path = string.Empty;
         public MainWindow()
         {
             InitializeComponent();
@@ -33,19 +34,26 @@ namespace Show
 
         private void MenuChooseFile_Click(object sender, RoutedEventArgs e)
         {
-            dlg = new FindFilePath();
-            var result = dlg.ShowDialog();
-            if (result == null || result.Value == false)
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                return;
+                openFileDialog.InitialDirectory = "c:\\";
+                openFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+                openFileDialog.FilterIndex = 2;
+                openFileDialog.RestoreDirectory = true;
+
+                if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    path = openFileDialog.FileName;
+                    ReadFile();
+                }
             }
-            ReadFile();
+            
         }
 
         public void ReadFile()
         {
             string[] ss;
-            using (FileStream fstream = File.OpenRead(dlg.Path))
+            using (FileStream fstream = File.OpenRead(path))
             {
                 byte[] array = new byte[fstream.Length];
                 fstream.Read(array, 0, array.Length);
