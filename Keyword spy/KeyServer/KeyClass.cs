@@ -12,13 +12,15 @@ namespace KeyServer
         public string Key { get; set; }
         public string Time { get; set; }
         public string PC { get; set; }
+        public string UpDown { get; set; }
 
-        public KeyClass(int id, string key, string time, string pc)
+        public KeyClass(int id, string key, string time, string pc, string upDown)
         {
             Id = id;
             Key = key;
             Time = time;
             PC = pc;
+            UpDown = upDown;
         }
     }
 

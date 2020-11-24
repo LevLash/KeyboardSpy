@@ -113,7 +113,7 @@ namespace KeyServer
                             break;
                         case PackageType.Pressed:
                             Dispatcher.Invoke(() => {
-                                keys.Add(new KeyClass(keys.Count + 1, ss[1], ss[2], ss[3]));
+                                keys.Add(new KeyClass(keys.Count + 1, ss[1], ss[2], ss[3], ss[4]));
                             });
                             break;
                         case PackageType.Off:

@@ -76,7 +76,7 @@ namespace Show
                 {
                     Dispatcher.Invoke(() =>
                     {
-                        keysList.Add(new KeyClass(keysList.Count + 1, sss[1], sss[2], sss[3]));
+                        keysList.Add(new KeyClass(keysList.Count + 1, sss[1], sss[2], sss[3], sss[4]));
                     });
                 }
                 

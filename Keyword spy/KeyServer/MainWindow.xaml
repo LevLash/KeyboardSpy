@@ -15,7 +15,7 @@
             <RowDefinition Height="auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Menu Grid.Row="0" Grid.Column="0">
+        <Menu Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
             <MenuItem Header="Menu">
                 <MenuItem x:Name="btn_Start" Header="Start server" Click="MenuItemStartServer_Click"></MenuItem>
                 <MenuItem Header="Clear" Click="MenuItemClear_Click"></MenuItem>

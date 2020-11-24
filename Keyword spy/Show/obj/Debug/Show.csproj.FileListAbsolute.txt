@@ -1,5 +1,4 @@
 C:\Users\PcWorkstation\source\repos\LevLash\KeywordSpy\Keyword spy\Show\obj\Debug\Show.csprojAssemblyReference.cache
-C:\Users\PcWorkstation\source\repos\LevLash\KeywordSpy\Keyword spy\Show\obj\Debug\FindFilePath.g.cs
 C:\Users\PcWorkstation\source\repos\LevLash\KeywordSpy\Keyword spy\Show\obj\Debug\MainWindow.g.cs
 C:\Users\PcWorkstation\source\repos\LevLash\KeywordSpy\Keyword spy\Show\obj\Debug\App.g.cs
 C:\Users\PcWorkstation\source\repos\LevLash\KeywordSpy\Keyword spy\Show\obj\Debug\Show_MarkupCompile.cache
@@ -8,7 +7,6 @@ C:\Users\PcWorkstation\source\repos\LevLash\KeywordSpy\Keyword spy\Show\bin\Debu
 C:\Users\PcWorkstation\source\repos\LevLash\KeywordSpy\Keyword spy\Show\bin\Debug\Show.exe
 C:\Users\PcWorkstation\source\repos\LevLash\KeywordSpy\Keyword spy\Show\bin\Debug\Show.pdb
 C:\Users\PcWorkstation\source\repos\LevLash\KeywordSpy\Keyword spy\Show\obj\Debug\MainWindow.baml
-C:\Users\PcWorkstation\source\repos\LevLash\KeywordSpy\Keyword spy\Show\obj\Debug\FindFilePath.baml
 C:\Users\PcWorkstation\source\repos\LevLash\KeywordSpy\Keyword spy\Show\obj\Debug\Show.g.resources
 C:\Users\PcWorkstation\source\repos\LevLash\KeywordSpy\Keyword spy\Show\obj\Debug\Show.Properties.Resources.resources
 C:\Users\PcWorkstation\source\repos\LevLash\KeywordSpy\Keyword spy\Show\obj\Debug\Show.csproj.GenerateResource.cache
