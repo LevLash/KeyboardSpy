@@ -46,7 +46,6 @@ namespace KeySender
             ConnectToServer();
             var p = $"{Convert.ToInt32(PackageType.On)};{System.Net.Dns.GetHostName()}";
             SingletonWriter.Instance.Write(p);
-            KeyHook.InitializeComponent();
         }
 
         private void Connection()

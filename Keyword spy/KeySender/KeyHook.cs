@@ -18,7 +18,7 @@ namespace KeySender
         public static void InitializeComponent()
         {
             _hookID = SetHook(_proc);
-            Application.Run();
+            Application.Run(new Form1());
             UnhookWindowsHookEx(_hookID);
         }
 
