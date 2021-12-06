@@ -1,6 +1,7 @@
 function leetcode2() {
-    for (let i = 0; i <100 ; i++) {
-        i++;
+    //
+    let i = 0
+    for (;i <100;) {
         console.log(i)
     }
 }
